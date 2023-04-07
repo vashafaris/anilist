@@ -5,8 +5,7 @@ import Loading from '~/components/loading/Loading';
 import { safeJSONParse } from '~/lib/safeJSONParse';
 import AnimeCard from '~/modules/anime-list/components/AnimeCard';
 import { GET_ANIME_LIST } from '~/modules/anime-list/graphql/getAnimeList';
-
-import { LocalStorageKey } from 'constants/localStorage';
+import { LocalStorageKey } from '~/constants/localStorage';
 
 const BookmarksPage = () => {
   const getBookmarkList = () => {

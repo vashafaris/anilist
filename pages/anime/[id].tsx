@@ -7,8 +7,7 @@ import Loading from '~/components/loading/Loading';
 import { GET_ANIME_DETAILS } from '~/modules/anime-details/graphql/getAnimeDetails';
 import ToggleButton from '~/components/toggle-button/ToggleButton';
 import { safeJSONParse } from '~/lib/safeJSONParse';
-
-import { LocalStorageKey } from 'constants/localStorage';
+import { LocalStorageKey } from '~/constants/localStorage';
 
 const DetailsPage = () => {
   const router = useRouter();
