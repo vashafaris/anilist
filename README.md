@@ -3,7 +3,8 @@
 - [x] Basic Requirements (List, Infinity Scroll, Filter, Details Page, Bookmark Page)
 - [x] (Optional) Build the homepage based on the most trending order
 - [x] (Optional) Add some unit testing in your project
-  <img width="696" alt="image" src="https://user-images.githubusercontent.com/55099418/230690544-451eb313-9ba3-4fc4-b596-a2057d0ea498.png">
+<img width="692" alt="image" src="https://user-images.githubusercontent.com/55099418/230691912-a6a648ee-5d1f-4429-8630-beb61ee5932d.png">
+
 
 - [ ] (Optional) Implement offline capabilities with PWA/Service Workers
 
