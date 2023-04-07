@@ -1,20 +1,23 @@
-# Next.js Starter Template [![CI](https://github.com/vashafaris/nextjs-starter-template/actions/workflows/ci.yml/badge.svg)](https://github.com/vashafaris/nextjs-starter-template/actions/workflows/ci.yml)
+# Mission
 
-> Personal template to make life easier
+- [x] Basic Requirements (List, Infinity Scroll, Filter, Details Page, Bookmark Page)
+- [x] (Optional) Build the homepage based on the most trending order
+- [x] (Optional) Add some unit testing in your project
+- [ ] (Optional) Implement offline capabilities with PWA/Service Workers
+
 
 ## Stack used
 
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/) for styling
-- [SWR](https://swr.vercel.app/) for data fetching + caching
-- [Zustand](https://zustand-demo.pmnd.rs/) for state management
+- [Apollo](https://www.apollographql.com/) for data fetching
 
-## Linter
+## Screenshots
 
-- [Husky](https://typicode.github.io/husky/#/) + [Lint Staged](https://github.com/okonet/lint-staged)
-- [ESlint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+<img width="1359" alt="image" src="https://user-images.githubusercontent.com/55099418/230683500-064519fe-7079-4eeb-9b19-03021718b637.png">
+<img width="985" alt="image" src="https://user-images.githubusercontent.com/55099418/230683565-585c692a-ae83-48de-a3f1-ad7c28eb8a4b.png">
+
 
 ## Developing
 
@@ -36,12 +39,6 @@ yarn validate
 # run unit tests
 yarn test
 ```
-
-## Architecture
-
-### Data fetching
-
-We use [Next.js API routes](https://nextjs.org/docs/api-routes/introduction) to wrap requests heading to the Random User API. Then we use [SWR](https://swr.vercel.app/) for our data-fetching logic, allowing for data fetches to be wrapped in a custom hook.
 
 ### Directory structure
 
