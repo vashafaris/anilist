@@ -1,16 +1,58 @@
+import { useRouter } from 'next/router';
 import { screen, waitFor } from '@testing-library/react';
-import renderFullApp from '~/lib/renderFullApp';
+import { MockedProvider } from '@apollo/client/testing';
+import userEvent from '@testing-library/user-event';
 
-import Home from '~/pages/index';
+import renderFullApp from '~/lib/renderFullApp';
+import AnimeListPage from '~/pages/index';
+import { ANIME_LIST_MOCK } from '~/__mocks__/animeListMock';
+
+jest.mock('next/router', () => ({
+  useRouter: jest.fn(),
+}));
+
+const mockPush = jest.fn();
+
+(useRouter as any).mockReturnValue({
+  query: {},
+  push: mockPush,
+});
 
 describe('Anime List Page', () => {
-  it('should initially render Loading when opening Anime List Page', async () => {
-    renderFullApp(<Home />);
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
-    const mainText = screen.getByText('Loading...');
+  it('should initially render Loading when opening Anime List Page', async () => {
+    renderFullApp(
+      <MockedProvider mocks={ANIME_LIST_MOCK} addTypename={false}>
+        <AnimeListPage />
+      </MockedProvider>
+    );
+
+    const loadingText = screen.getByText('Loading...');
 
     await waitFor(() => {
-      expect(mainText).toBeInTheDocument();
+      expect(loadingText).toBeInTheDocument();
+    });
+  });
+
+  it('should navigate to details page when click on cover image', async () => {
+    renderFullApp(
+      <MockedProvider mocks={ANIME_LIST_MOCK} addTypename={false}>
+        <AnimeListPage />
+      </MockedProvider>
+    );
+
+    await waitFor(() => {
+      const titleText = screen.getByText(/MASHLE/);
+      expect(titleText).toBeInTheDocument();
+
+      userEvent.click(screen.getAllByTestId('anime-card-cover-img')[0], undefined, {
+        skipPointerEventsCheck: true,
+      });
+
+      expect(mockPush).toHaveBeenCalledWith('/anime/151801');
     });
   });
 });

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 interface AnimeCardProps {
@@ -11,6 +11,8 @@ interface AnimeCardProps {
 }
 
 const AnimeCard = ({ id, title, score, src, status }: AnimeCardProps) => {
+  const router = useRouter();
+
   const handleNavigateToDetailsPage = async () => {
     await router.push(`/anime/${id}`);
   };
@@ -18,6 +20,7 @@ const AnimeCard = ({ id, title, score, src, status }: AnimeCardProps) => {
   return (
     <div>
       <Image
+        data-testid="anime-card-cover-img"
         onClick={handleNavigateToDetailsPage}
         className="rounded-lg cursor-pointer"
         width={160}
