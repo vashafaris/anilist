@@ -6,8 +6,7 @@ import Loading from '~/components/loading/Loading';
 import ToggleButton from '~/components/toggle-button/ToggleButton';
 import AnimeCard from '~/modules/anime-list/components/AnimeCard';
 import { GET_ANIME_LIST } from '~/modules/anime-list/graphql/getAnimeList';
-
-import useInfiniteScroll from 'hooks/useInfiniteScroll';
+import useInfiniteScroll from '~/hooks/useInfiniteScroll';
 
 const Home: NextPage = () => {
   const [filteredGenre, setFilteredGenre] = useState<string[]>([]);
