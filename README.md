@@ -13,11 +13,11 @@
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [Apollo](https://www.apollographql.com/) for data fetching
 
-## Linter
+## Screenshots
 
-- [Husky](https://typicode.github.io/husky/#/) + [Lint Staged](https://github.com/okonet/lint-staged)
-- [ESlint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+<img width="1359" alt="image" src="https://user-images.githubusercontent.com/55099418/230683500-064519fe-7079-4eeb-9b19-03021718b637.png">
+<img width="985" alt="image" src="https://user-images.githubusercontent.com/55099418/230683565-585c692a-ae83-48de-a3f1-ad7c28eb8a4b.png">
+
 
 ## Developing
 
