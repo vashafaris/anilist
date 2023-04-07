@@ -10,6 +10,7 @@
       "~/constants/*": ["constants/*"],
       "~/hooks/*": ["hooks/*"],
       "~/lib/*": ["lib/*"],
+      "~/__mocks__/*": ["__mocks__/*"],
       "~/modules/*": ["modules/*"],
       "~/pages/*": ["pages/*"],
       "~/types/*": ["types/*"]
